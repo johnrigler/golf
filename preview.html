@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      name="description"
+      content="Online Golf delivers curated golf rounds, tee-time help, and course-ready planning for players who want a simpler way to play."
+    />
+
+    <title>Online Golf | Your Round, Delivered</title>
+
+    <style>
+      :root {
+        color-scheme: light;
+        --color-green-900: #082f1f;
+        --color-green-700: #14613d;
+        --color-green-100: #e8f5ec;
+        --color-gold: #f2c94c;
+        --color-white: #ffffff;
+        --color-gray-100: #f7f7f4;
+        --color-gray-700: #4a534d;
+        --color-gray-900: #111812;
+        --shadow-card: 0 24px 80px rgba(8, 47, 31, 0.18);
+        --radius-large: 28px;
+        --radius-medium: 18px;
+        --max-width: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--color-gray-100);
+        color: var(--color-gray-900);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      .site-header {
+        background: var(--color-white);
+        border-bottom: 1px solid rgba(8, 47, 31, 0.08);
+      }
+
+      .nav {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: var(--max-width);
+        padding: 20px;
+      }
+
+      .brand {
+        align-items: center;
+        display: inline-flex;
+        font-size: 1.05rem;
+        font-weight: 800;
+        gap: 10px;
+        letter-spacing: -0.03em;
+      }
+
+      .brand-mark {
+        align-items: center;
+        background: var(--color-green-900);
+        border-radius: 999px;
+        color: var(--color-gold);
+        display: inline-flex;
+        height: 38px;
+        justify-content: center;
+        width: 38px;
+      }
+
+      .nav-link {
+        color: var(--color-green-700);
+        font-weight: 700;
+      }
+
+      .hero {
+        background:
+          radial-gradient(circle at 85% 15%, rgba(242, 201, 76, 0.32), transparent 28rem),
+          linear-gradient(135deg, var(--color-green-900), #0b432b);
+        color: var(--color-white);
+        overflow: hidden;
+      }
+
+      .hero-inner {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        margin: 0 auto;
+        max-width: var(--max-width);
+        padding: 76px 20px;
+      }
+
+      .eyebrow {
+        color: var(--color-gold);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        margin: 0 0 16px;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 8vw, 6.7rem);
+        letter-spacing: -0.08em;
+        line-height: 0.9;
+        margin: 0;
+        max-width: 780px;
+      }
+
+      .hero-copy {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: clamp(1.05rem, 2vw, 1.3rem);
+        margin: 24px 0 0;
+        max-width: 620px;
+      }
+
+      .hero-actions {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 34px;
+      }
+
+      .button {
+        background: var(--color-gold);
+        border: 0;
+        border-radius: 999px;
+        color: var(--color-green-900);
+        cursor: pointer;
+        display: inline-flex;
+        font-weight: 900;
+        justify-content: center;
+        padding: 15px 22px;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        box-shadow: 0 14px 30px rgba(242, 201, 76, 0.28);
+        transform: translateY(-2px);
+      }
+
+      .secondary-link {
+        color: rgba(255, 255, 255, 0.82);
+        font-weight: 800;
+      }
+
+      .signup-card {
+        align-self: center;
+        background: var(--color-white);
+        border-radius: var(--radius-large);
+        box-shadow: var(--shadow-card);
+        color: var(--color-gray-900);
+        padding: 28px;
+      }
+
+      .signup-card h2 {
+        font-size: 2rem;
+        letter-spacing: -0.05em;
+        line-height: 1;
+        margin: 0;
+      }
+
+      .signup-card p {
+        color: var(--color-gray-700);
+        margin: 12px 0 24px;
+      }
+
+      .field-group {
+        display: grid;
+        gap: 12px;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .field label {
+        color: var(--color-green-900);
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
+
+      .field input {
+        background: var(--color-gray-100);
+        border: 1px solid rgba(8, 47, 31, 0.14);
+        border-radius: 14px;
+        min-height: 52px;
+        padding: 0 15px;
+        width: 100%;
+      }
+
+      .field input:focus {
+        border-color: var(--color-green-700);
+        outline: 3px solid rgba(20, 97, 61, 0.16);
+      }
+
+      .form-note {
+        color: var(--color-gray-700);
+        font-size: 0.86rem;
+        margin: 14px 0 0;
+      }
+
+      .form-message {
+        border-radius: 14px;
+        display: none;
+        font-weight: 800;
+        margin-top: 16px;
+        padding: 14px;
+      }
+
+      .form-message.is-visible {
+        background: var(--color-green-100);
+        color: var(--color-green-900);
+        display: block;
+      }
+
+      .section {
+        margin: 0 auto;
+        max-width: var(--max-width);
+        padding: 72px 20px;
+      }
+
+      .section-heading {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        letter-spacing: -0.07em;
+        line-height: 1;
+        margin: 0 0 28px;
+        max-width: 780px;
+      }
+
+      .cards {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card {
+        background: var(--color-white);
+        border: 1px solid rgba(8, 47, 31, 0.08);
+        border-radius: var(--radius-medium);
+        padding: 24px;
+      }
+
+      .card strong {
+        color: var(--color-green-700);
+        display: block;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+
+      .card h3 {
+        font-size: 1.35rem;
+        letter-spacing: -0.04em;
+        margin: 0 0 10px;
+      }
+
+      .card p {
+        color: var(--color-gray-700);
+        margin: 0;
+      }
+
+      .cta-band {
+        background: var(--color-green-900);
+        border-radius: var(--radius-large);
+        color: var(--color-white);
+        display: grid;
+        gap: 20px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        padding: 34px;
+      }
+
+      .cta-band h2 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        letter-spacing: -0.07em;
+        line-height: 1;
+        margin: 0;
+      }
+
+      .cta-band p {
+        color: rgba(255, 255, 255, 0.78);
+        margin: 10px 0 0;
+        max-width: 620px;
+      }
+
+      .site-footer {
+        color: var(--color-gray-700);
+        margin: 0 auto;
+        max-width: var(--max-width);
+        padding: 0 20px 34px;
+      }
+
+      @media (max-width: 840px) {
+        .hero-inner,
+        .cards,
+        .cta-band {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-inner {
+          padding: 54px 20px;
+        }
+
+        .cta-band .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Online Golf home">
+          <span class="brand-mark" aria-hidden="true">●</span>
+          <span>Online Golf</span>
+        </a>
+        <a class="nav-link" href="#signup">Get early access</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div>
+            <p class="eyebrow">Your Round, Delivered</p>
+            <h1 id="hero-title">Book better golf without the clubhouse runaround.</h1>
+            <p class="hero-copy">
+              Online Golf helps players find, plan, and lock in course-ready rounds with simple recommendations,
+              tee-time support, and everything needed before the first swing.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#signup">Reserve your spot</a>
+              <a class="secondary-link" href="#how-it-works">See how it works</a>
+            </div>
+          </div>
+
+          <form class="signup-card" id="signup" aria-label="Online Golf early access form">
+            <h2>Get first access</h2>
+            <p>Tell us where you play. We’ll send launch access and round options near you.</p>
+
+            <div class="field-group">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" autocomplete="email" type="email" required />
+              </div>
+
+              <div class="field">
+                <label for="location">Preferred golf area</label>
+                <input id="location" name="location" autocomplete="address-level2" required />
+              </div>
+
+              <button class="button" type="submit">Join the list</button>
+            </div>
+
+            <p class="form-note">No spam. Just launch updates and better ways to play.</p>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works" aria-labelledby="how-it-works-title">
+        <h2 class="section-heading" id="how-it-works-title">A cleaner path from “I want to play” to teeing off.</h2>
+
+        <div class="cards">
+          <article class="card">
+            <strong>01</strong>
+            <h3>Tell us your round</h3>
+            <p>Share your area, timing, group size, and style of play.</p>
+          </article>
+
+          <article class="card">
+            <strong>02</strong>
+            <h3>Get matched</h3>
+            <p>Receive course and tee-time options that fit your day.</p>
+          </article>
+
+          <article class="card">
+            <strong>03</strong>
+            <h3>Show up ready</h3>
+            <p>Arrive with the details handled and your round dialed in.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="final-cta-title">
+        <div class="cta-band">
+          <div>
+            <h2 id="final-cta-title">Your next round should feel this easy.</h2>
+            <p>Join the Online Golf launch list and get access when rounds open in your area.</p>
+          </div>
+          <a class="button" href="#signup">Get early access</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>&copy; 2026 Online Golf. Your Round, Delivered.</small>
+    </footer>
+
+    <script>
+      (function () {
+        const SUCCESS_MESSAGE = "You’re on the list. Your round is closer than ever.";
+
+        const elems = {
+          email: document.querySelector("input#email"),
+          form: document.querySelector("form#signup"),
+          formMessage: document.querySelector("p#formMessage"),
+          location: document.querySelector("input#location"),
+          name: document.querySelector("input#name"),
+        };
+
+        const state = {
+          message: "",
+        };
+
+        //
+        // DOM setters
+        //
+        function setSignupMessage(message) {
+          state.message = message;
+          renderSignup();
+        }
+
+        function clearSignupForm() {
+          elems.form.reset();
+          renderSignup();
+        }
+
+        function renderSignup() {
+          elems.formMessage.textContent = state.message;
+          elems.formMessage.classList.toggle("is-visible", state.message.length > 0);
+        }
+
+        //
+        // DOM listeners
+        //
+        function onLeadFormSubmit(event) {
+          event.preventDefault();
+
+          setSignupMessage(SUCCESS_MESSAGE);
+          clearSignupForm();
+        }
+
+        function addEventListeners() {
+          elems.form.onsubmit = onLeadFormSubmit;
+        }
+
+        addEventListeners();
+        renderSignup();
+      })();
+    </script>
+  </body>
+</html>
