@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Onsite Golf | Your round, delivered</title>
-  <meta name="description" content="Onsite Golf brings a mobile golf simulator experience to private parties, corporate events, weddings, birthdays, leagues, and special events.">
-  <meta property="og:title" content="Onsite Golf">
-  <meta property="og:description" content="Your round, delivered.">
+  <title>On-Site Golf | Your Round, Delivered Year Round</title>
+  <meta name="description" content="On-Site Golf brings a premium, mobile golf simulator experience to private parties, corporate events, weddings, birthdays, leagues, recreational spaces, and special events.">
+  <meta property="og:title" content="On-Site Golf">
+  <meta property="og:description" content="Your Round, Delivered Year Round.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="logo.png">
   <meta name="theme-color" content="#07150d">
@@ -21,7 +21,6 @@
       --muted: #c8d1c2;
       --green: #68d4d4;
       --green-2: #9ff2ee;
-      --orange: #ff9f1c;
       --line: rgba(255, 255, 255, 0.16);
       --shadow: 0 28px 80px rgba(0, 0, 0, 0.38);
       --radius: 28px;
@@ -37,8 +36,8 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 12% 10%, rgba(126, 217, 87, 0.20), transparent 28rem),
-        radial-gradient(circle at 82% 8%, rgba(255, 159, 28, 0.16), transparent 26rem),
+        radial-gradient(circle at 12% 10%, rgba(104, 212, 212, 0.20), transparent 28rem),
+        radial-gradient(circle at 82% 8%, rgba(159, 242, 238, 0.12), transparent 26rem),
         linear-gradient(145deg, #030704 0%, var(--bg) 42%, #020302 100%);
       min-height: 100vh;
     }
@@ -55,7 +54,7 @@
       top: 0;
       z-index: 10;
       backdrop-filter: blur(16px);
-      background: rgba(7, 21, 13, 0.74);
+      background: rgba(7, 21, 13, 0.78);
       border-bottom: 1px solid var(--line);
     }
 
@@ -63,30 +62,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      padding: 14px 0;
+      gap: 22px;
+      padding: 12px 0;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
       text-decoration: none;
       min-width: 0;
     }
 
     .brand img {
-      width: 64px;
-      height: 50px;
+      width: 94px;
+      height: 64px;
       object-fit: contain;
       filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.35));
-    }
-
-    .brand span {
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      font-size: clamp(1.1rem, 2vw, 1.35rem);
-      white-space: nowrap;
     }
 
     .nav-links {
@@ -94,14 +85,30 @@
       align-items: center;
       gap: 22px;
       font-size: 0.95rem;
-      color: var(--muted);
+      color: #ffffff;
+      font-weight: 800;
     }
 
-    .nav-links a {
+    .nav-links a,
+    .social-links a {
       text-decoration: none;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover,
+    .social-links a:hover { color: var(--green-2); }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #ffffff;
+    }
+
+    .social-links svg {
+      width: 21px;
+      height: 21px;
+      display: block;
+    }
 
     .button {
       display: inline-flex;
@@ -115,6 +122,7 @@
       text-decoration: none;
       line-height: 1;
       transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      white-space: nowrap;
     }
 
     .button:hover { transform: translateY(-1px); }
@@ -122,7 +130,7 @@
     .button.primary {
       background: linear-gradient(135deg, var(--green), var(--green-2));
       color: #07150d;
-      box-shadow: 0 16px 40px rgba(126, 217, 87, 0.28);
+      box-shadow: 0 16px 40px rgba(104, 212, 212, 0.26);
     }
 
     .button.secondary {
@@ -131,9 +139,7 @@
       color: var(--text);
     }
 
-    .hero {
-      padding: 86px 0 56px;
-    }
+    .hero { padding: 86px 0 56px; }
 
     .hero-grid {
       display: grid;
@@ -142,31 +148,8 @@
       align-items: center;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 999px;
-      color: var(--green-2);
-      font-size: 0.86rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--orange);
-      box-shadow: 0 0 0 6px rgba(255, 159, 28, 0.12);
-    }
-
     h1 {
-      margin: 24px 0 16px;
+      margin: 0 0 16px;
       font-size: clamp(3.2rem, 8vw, 7rem);
       line-height: 0.88;
       letter-spacing: -0.08em;
@@ -176,6 +159,12 @@
     .tagline {
       display: block;
       color: var(--green-2);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      letter-spacing: -0.055em;
+      font-size: 0.47em;
+      line-height: 1.1;
+      margin-top: 0.18em;
     }
 
     .lead {
@@ -200,7 +189,7 @@
       border-radius: var(--radius);
       background:
         linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
-        radial-gradient(circle at 40% 10%, rgba(126, 217, 87, 0.24), transparent 22rem);
+        radial-gradient(circle at 40% 10%, rgba(104, 212, 212, 0.24), transparent 22rem);
       box-shadow: var(--shadow);
       padding: 28px;
       min-height: 500px;
@@ -213,7 +202,7 @@
       content: "";
       position: absolute;
       inset: 22px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 22px;
       pointer-events: none;
     }
@@ -221,7 +210,7 @@
     .logo-stage {
       display: grid;
       place-items: center;
-      min-height: 310px;
+      min-height: 315px;
       position: relative;
     }
 
@@ -231,12 +220,12 @@
       width: 78%;
       height: 32%;
       bottom: 20px;
-      background: radial-gradient(ellipse, rgba(126, 217, 87, 0.24), transparent 68%);
+      background: radial-gradient(ellipse, rgba(104, 212, 212, 0.22), transparent 68%);
       filter: blur(10px);
     }
 
     .logo-stage img {
-      width: min(360px, 88%);
+      width: min(420px, 94%);
       position: relative;
       z-index: 1;
       filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.52));
@@ -259,7 +248,7 @@
 
     .stat strong {
       display: block;
-      font-size: 1.25rem;
+      font-size: 1.18rem;
       color: var(--green-2);
     }
 
@@ -268,11 +257,10 @@
       margin-top: 5px;
       color: var(--muted);
       font-size: 0.82rem;
+      line-height: 1.35;
     }
 
-    section {
-      padding: 54px 0;
-    }
+    section { padding: 54px 0; }
 
     .section-head {
       display: flex;
@@ -307,7 +295,7 @@
       border-radius: 24px;
       background: var(--panel);
       padding: 24px;
-      min-height: 210px;
+      min-height: 230px;
     }
 
     .card b {
@@ -367,7 +355,7 @@
       border-radius: 50%;
       display: grid;
       place-items: center;
-      background: rgba(126, 217, 87, 0.16);
+      background: rgba(104, 212, 212, 0.16);
       color: var(--green-2);
       font-weight: 900;
     }
@@ -378,7 +366,7 @@
       flex-direction: column;
       justify-content: space-between;
       background:
-        linear-gradient(145deg, rgba(126, 217, 87, 0.16), rgba(255, 159, 28, 0.08)),
+        linear-gradient(145deg, rgba(104, 212, 212, 0.16), rgba(159, 242, 238, 0.06)),
         var(--panel-strong);
     }
 
@@ -396,9 +384,7 @@
       line-height: 1.5;
     }
 
-    .contact {
-      padding-bottom: 84px;
-    }
+    .contact { padding-bottom: 84px; }
 
     .contact-box {
       display: grid;
@@ -409,7 +395,7 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background:
-        radial-gradient(circle at 10% 10%, rgba(126, 217, 87, 0.20), transparent 22rem),
+        radial-gradient(circle at 10% 10%, rgba(104, 212, 212, 0.20), transparent 22rem),
         rgba(255, 255, 255, 0.08);
       box-shadow: var(--shadow);
     }
@@ -441,20 +427,32 @@
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a { color: var(--green-2); }
+
+    @media (max-width: 980px) {
+      .nav { gap: 14px; }
+      .social-links { gap: 9px; }
+      .social-links svg { width: 20px; height: 20px; }
     }
 
     @media (max-width: 860px) {
       .nav-links { display: none; }
+      .brand img { width: 82px; height: 56px; }
       .hero { padding-top: 54px; }
       .hero-grid,
       .split,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
+      .contact-box { grid-template-columns: 1fr; }
       .hero-card { min-height: auto; }
-      .section-head {
-        display: block;
-      }
+      .section-head { display: block; }
       .section-head p { margin-top: 14px; }
       .cards { grid-template-columns: 1fr; }
       .contact-actions { justify-content: flex-start; }
@@ -462,7 +460,10 @@
 
     @media (max-width: 520px) {
       .shell { width: min(100% - 22px, var(--max)); }
-      .brand img { width: 52px; height: 42px; }
+      .nav { flex-wrap: wrap; }
+      .brand img { width: 68px; height: 48px; }
+      .social-links { margin-left: auto; }
+      header .button.primary { width: 100%; }
       .hero-card, .panel, .contact-box { padding: 22px; border-radius: 22px; }
       .stat-row { grid-template-columns: 1fr; }
       .button { width: 100%; }
@@ -472,16 +473,26 @@
 <body>
   <header>
     <div class="shell nav" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Onsite Golf home">
-        <img src="logo.png" alt="Onsite Golf logo">
-        <span>Onsite Golf</span>
+      <a class="brand" href="#top" aria-label="On-Site Golf home">
+        <img src="ball-logo.png" alt="On-Site Golf ball logo">
       </a>
       <nav class="nav-links" aria-label="Page sections">
         <a href="#events">Events</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Book</a>
       </nav>
-      <a class="button primary" href="#contact">Request pricing</a>
+      <nav class="social-links" aria-label="Social media">
+        <a href="https://www.youtube.com/channel/UCLpKmOFLMvo-YwTntij3T3w" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.58 7.19a2.49 2.49 0 0 0-1.75-1.76C18.28 5 12 5 12 5s-6.28 0-7.83.43a2.49 2.49 0 0 0-1.75 1.76A26.09 26.09 0 0 0 2 12a26.09 26.09 0 0 0 .42 4.81 2.49 2.49 0 0 0 1.75 1.76C5.72 19 12 19 12 19s6.28 0 7.83-.43a2.49 2.49 0 0 0 1.75-1.76A26.09 26.09 0 0 0 22 12a26.09 26.09 0 0 0-.42-4.81ZM10 15V9l5.2 3L10 15Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/onsitegolfandsports/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Zm5.1-2.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
+        </a>
+        <a href="https://x.com/on_site_golf" target="_blank" rel="noopener" aria-label="X" title="X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.7l-5.2-6.8L5.6 22H2.3l7.7-8.8L1.8 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.6 3.9H5.7L17.7 20Z"/></svg>
+        </a>
+      </nav>
+      <a class="button primary" href="mailto:onsitegolfandsports@gmail.com?subject=On-Site%20Golf%20pricing%20request">Request pricing</a>
     </div>
   </header>
 
@@ -489,23 +500,22 @@
     <section class="hero">
       <div class="shell hero-grid">
         <div>
-          <div class="eyebrow"><span class="dot"></span> Mobile golf simulator rental</div>
-          <h1>Onsite Golf <span class="tagline">Your round, delivered</span></h1>
-          <p class="lead">Bring a premium simulator golf experience to your event. We set up the bay, run the session, and give guests a clean way to play, compete, warm up, or just take a few swings.</p>
+          <h1>On-Site Golf <span class="tagline">Your Round, Delivered Year Round</span></h1>
+          <p class="lead">Bring a Premium, Mobile Simulator Experience to your event. We set up the bay, run the session, and give guests a clean way to play, compete, warm up, or just take a few swings.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">Book an event</a>
+            <a class="button primary" href="mailto:onsitegolfandsports@gmail.com?subject=On-Site%20Golf%20event%20pricing%20request">Book an event</a>
             <a class="button secondary" href="#experience">See what you get</a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Onsite Golf branding">
+        <aside class="hero-card" aria-label="On-Site Golf branding">
           <div class="logo-stage">
-            <img src="logo.png" alt="Onsite Golf logo">
+            <img src="logo.png" alt="On-Site Golf logo with slogan Your Round, Delivered">
           </div>
           <div class="stat-row">
-            <div class="stat"><strong>Private</strong><span>Parties and celebrations</span></div>
-            <div class="stat"><strong>Corporate</strong><span>Team events and activations</span></div>
-            <div class="stat"><strong>League</strong><span>Competition and contests</span></div>
+            <div class="stat"><strong>Private + Leagues</strong><span>Parties, weddings, celebrations, and league play</span></div>
+            <div class="stat"><strong>Corporate</strong><span>Hosted Events and Team Building Activities</span></div>
+            <div class="stat"><strong>Recreational</strong><span>All other available spaces where 10'x8.5'x15' can reasonably fit with swing space</span></div>
           </div>
         </aside>
       </div>
@@ -514,24 +524,23 @@
     <section id="events">
       <div class="shell">
         <div class="section-head">
-          <h2>Golf without renting the course.</h2>
-          <p>A focused funnel page should answer the buyer’s first question fast: what is it, who is it for, and how do I book it?</p>
+          <h2>Create a Custom Golf Experience That Suits All Your Entertainment Needs.</h2>
         </div>
         <div class="cards">
           <article class="card">
             <b>01</b>
             <h3>Private events</h3>
-            <p>Birthdays, bachelor parties, backyard gatherings, graduation parties, and family events where guests need something better than standing around.</p>
+            <p>Birthdays, bachelor/ette parties, backyard gatherings, weddings, graduation parties, and family events where guests need something better than standing around.</p>
           </article>
           <article class="card">
             <b>02</b>
             <h3>Corporate events</h3>
-            <p>Team-building, client entertainment, trade-show traffic, employee appreciation, and brand activations with a low-friction competitive hook.</p>
+            <p>Hosted Events and Team Building Activities for client entertainment, employee appreciation, trade-show traffic, and brand activations.</p>
           </article>
           <article class="card">
             <b>03</b>
-            <h3>Weddings and venues</h3>
-            <p>A compact entertainment lane for receptions, clubs, hotels, breweries, casinos, and event spaces that want a premium add-on.</p>
+            <h3>Recreational spaces</h3>
+            <p>Fraternal Orders, VFW's, over 55 communities, assisted livings, schools, universities, clubs, hotels, breweries, casinos, and other event spaces.</p>
           </article>
         </div>
       </div>
@@ -540,16 +549,16 @@
     <section id="experience">
       <div class="shell split">
         <div class="panel quote">
-          <p>Real swings. Real numbers. No tee time required.</p>
-          <span>Use the simulator as a party feature, a closest-to-the-pin contest, a long-drive challenge, a league night, or a full-course session.</span>
+          <p>Mobile Golf Simulation Experience Built For Entertainment &amp; Fun For All Ages.</p>
+          <span>Use the simulator as a party feature, a league night, a structured contest, a practice session, or a compact entertainment lane for guests who want something active.</span>
         </div>
         <div class="panel">
           <ul class="feature-list">
             <li><span class="check">✓</span><span><strong>Simulator bay delivered onsite.</strong> The golf experience comes to the event location instead of sending guests somewhere else.</span></li>
             <li><span class="check">✓</span><span><strong>Fast guest rotation.</strong> People can jump in for a few swings or stay for structured play.</span></li>
+            <li><span class="check">✓</span><span><strong>Options include:</strong> Full Rounds, 9-Holes, Par-3 Round, Long Drive, Closest to the Pin, Putting Challenges, Scrambles, Range, Practice.</span></li>
             <li><span class="check">✓</span><span><strong>Event-friendly formats.</strong> Closest-to-the-pin, long drive, skills challenges, team competitions, or open play.</span></li>
-            <li><span class="check">✓</span><span><strong>Indoor or controlled outdoor setup.</strong> Best fit depends on space, ceiling height, power, weather, and event flow.</span></li>
-            <li><span class="check">✓</span><span><strong>Simple booking conversation.</strong> Send the date, location, headcount, and event type. Pricing can be scoped from there.</span></li>
+            <li><span class="check">✓</span><span><strong>Simple booking conversation.</strong> Send the date, location, headcount, and event type. Affordable Pricing Can Be Quoted From There.</span></li>
           </ul>
         </div>
       </div>
@@ -558,11 +567,11 @@
     <section id="contact" class="contact">
       <div class="shell contact-box">
         <div>
-          <h2>Book the round.</h2>
-          <p>Send your event date, location, approximate guest count, and the kind of experience you want. Replace the placeholder links below with the real phone number and booking email.</p>
+          <h2>Book Your Round.</h2>
+          <p>Send event date, location, guest count (approximate), and the kind of experience you want. We normally rent by the hour (4 hour limit) but can accommodate as best seen fit.</p>
         </div>
         <div class="contact-actions">
-          <a class="button primary" href="mailto:grgallucci10@gmail.com?subject=Onsite%20Golf%20event%20pricing%20request">Email booking</a>
+          <a class="button primary" href="mailto:onsitegolfandsports@gmail.com?subject=On-Site%20Golf%20event%20pricing%20request">Email booking</a>
           <a class="button secondary" href="tel:+10000000000">Call now</a>
         </div>
       </div>
@@ -571,8 +580,22 @@
 
   <footer>
     <div class="shell footer-row">
-      <span>© 2026 Onsite Golf. All rights reserved.</span>
-      <span>Your round, delivered.</span>
+      <span>© 2026 On-Site Golf. All rights reserved.</span>
+      <div class="footer-links">
+        <span>Your Round, Delivered Year Round.</span>
+        <nav class="social-links" aria-label="Social media footer links">
+          <a href="https://www.youtube.com/channel/UCLpKmOFLMvo-YwTntij3T3w" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.58 7.19a2.49 2.49 0 0 0-1.75-1.76C18.28 5 12 5 12 5s-6.28 0-7.83.43a2.49 2.49 0 0 0-1.75 1.76A26.09 26.09 0 0 0 2 12a26.09 26.09 0 0 0 .42 4.81 2.49 2.49 0 0 0 1.75 1.76C5.72 19 12 19 12 19s6.28 0 7.83-.43a2.49 2.49 0 0 0 1.75-1.76A26.09 26.09 0 0 0 22 12a26.09 26.09 0 0 0-.42-4.81ZM10 15V9l5.2 3L10 15Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/onsitegolfandsports/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Zm5.1-2.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
+          </a>
+          <a href="https://x.com/on_site_golf" target="_blank" rel="noopener" aria-label="X" title="X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.7l-5.2-6.8L5.6 22H2.3l7.7-8.8L1.8 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.6 3.9H5.7L17.7 20Z"/></svg>
+          </a>
+        </nav>
+        <a href="On-Site-Golf-LLC-Certificate-of-Good-Standing.pdf" target="_blank" rel="noopener">Business certificate of good standing</a>
+      </div>
     </div>
   </footer>
 </body>
